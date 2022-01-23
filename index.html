@@ -15,9 +15,22 @@
     </style>
     <h1 style="text-align: center;font-family: Arial, Helvetica, sans-serif;size: 650px;">Welcome To Sams Security Camera</h1>
     <h2 style="text-align: center;font-family: Arial, Helvetica, sans-serif;">Please Enter The Password Below</h2>
-    <form action="check.js">
-        <input type="text" id="passcode" style="text-align: center;">
-        <button>Continue</button>
-    </form>
+    <script>
+        function checkPassword() {
+         var password = document.getElementById("passwordBox");
+         var passwordText = password.value;
+         if(passwordText == "testcode") {
+          return true;
+         }
+         alert("Access denied! Incorrect password!");
+         return false;
+         }
+       </script>
+      </head>
+      <body>
+       <input id="passwordBox" type="password"/></p>
+       <a href="camera.html" onclick="return checkPassword();">
+        Submit Password
+       </a>
 </body>
 </html>

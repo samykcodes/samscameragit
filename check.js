@@ -1,5 +1,7 @@
-pass = document.getElementById("passcode")
 
-if (pass === "testcode") {
-    window.location.replace("");
-}
+function checkPassword () {
+    pass = document.getElementById("passcode")
+    passtext = pass.value
+    if (passtext === "testcode") {
+        alert('Correct')
+}}
